@@ -1,0 +1,21 @@
+.tarefa,
+.login {
+    margin: auto;
+    margin-top: 100px;
+    width: 600px;
+}
+
+.list {
+    margin-top: 100px;
+}
+
+.breadcrumb,
+.registrar {
+    margin-left: 50px;
+    color: darkgray;
+}
+
+.btn,
+.tituloTarefa {
+    margin-right: 10px;
+}

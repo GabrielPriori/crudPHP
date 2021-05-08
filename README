@@ -1,0 +1,21 @@
+BANCO DE DADOS
+
+**** CRIAR BANCO
+CREATE SCHEMA `crud_php` ;
+
+**** CRIAR TABLE USUÁRIO
+CREATE TABLE `crud_php`.`user` (
+  `id_user` INT NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_user`));
+
+**** CRIAR TABLE TAREFAS
+CREATE TABLE `crud_php`.`tarefas` (
+  `idTarefas` INT NOT NULL AUTO_INCREMENT,
+  `idUser` INT NOT NULL,
+  `titulo` VARCHAR(60) NOT NULL,
+  `data` DATE NOT NULL,
+  `lembrete` VARCHAR(1000) NOT NULL,
+  PRIMARY KEY (`idTarefas`));
