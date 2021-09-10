@@ -1,5 +1,5 @@
 <?php
-    include_once 'funcoes.php';
+    include_once 'php/funcoes.php';
     if(!isset($_SESSION['idUser'])){
         header("Location: login.php");
     }
@@ -29,7 +29,7 @@
             <a class="nav-link active" aria-current="page" href="cadastrar-tarefa.php">Tarefa+</a>
           </div>
         </div>
-        <a href="logout.php"><?php echo BuscaUser($_SESSION['idUser'])?>/Sair</a>
+        <a href="php/logout.php"><?php echo BuscaUser($_SESSION['idUser'])?>/Sair</a>
       </div>
     </nav>
     <div class="list">

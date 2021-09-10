@@ -1,5 +1,5 @@
 <?php
-    include_once 'funcoes.php';
+    include_once 'php/funcoes.php';
     if(!isset($_SESSION['idUser'])){
         header("Location: login.php");
     }
@@ -69,7 +69,7 @@
             var data = $('#date').val();
             var lembrete = $('#lembrete').val();
 
-            $.post('formTarefa.php', {
+            $.post('php/formTarefa.php', {
                 titulo:titulo,
                 data:data,
                 lembrete:lembrete

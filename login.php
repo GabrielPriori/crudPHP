@@ -46,7 +46,7 @@
             var email = $('#email').val();
             var senha = $('#senha').val();
 
-            $.post('formLogar.php', {
+            $.post('php/formLogar.php', {
                 email: email,
                 senha: senha,
             }, function (resposta) {

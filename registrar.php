@@ -55,14 +55,14 @@
             var senha = $('#senha').val();
             var confirmSenha = $('#confirmSenha').val();
 
-            $.post('formRegistrar.php', {
+            $.post('php/formRegistrar.php', {
                 nome:nome,
                 email:email,
                 senha:senha,
                 confirmSenha:confirmSenha
             }, function(resposta){
                 if(resposta == 1){
-                    window.location.href = "logar.php";
+                    window.location.href = "login.php";
                 }else{
                     $(".alert").show();
                     $('.msgErro').text(resposta);
