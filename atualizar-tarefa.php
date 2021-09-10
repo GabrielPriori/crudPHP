@@ -1,5 +1,5 @@
 <?php
-    include_once 'funcoes.php';
+    include_once 'php/funcoes.php';
     if(!isset($_SESSION['idUser'])){
         header("Location: login.php");
     }
@@ -30,7 +30,7 @@
             <a class="nav-link active" aria-current="page" href="./cadastrar-tarefa.php">Tarefa+</a>
           </div>
         </div>
-        <a href="logout.php"><?php echo BuscaUser($_SESSION['idUser'])?>/Sair</a>
+        <a href="../logout.php"><?php echo BuscaUser($_SESSION['idUser'])?>/Sair</a>
       </div>
     </nav>
     <div id="<?php echo $_SESSION['idTarefa'];  ?>" class="tarefa col-md-7 col-md-offset-2 cadastroTarefa">
@@ -70,7 +70,7 @@
             var data = $('#date').val();
             var lembrete = $('#lembrete').val();
 
-            $.post('formAtualizaTarefa.php', {
+            $.post('php/formAtualizaTarefa.php', {
                 idTarefa:idTarefa,
                 titulo:titulo,
                 data:data,

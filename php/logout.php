@@ -11,4 +11,4 @@ unset(
    $_SESSION['lembrete'],
 );
 
-header("Location: login.php");
+header("Location: ../login.php");

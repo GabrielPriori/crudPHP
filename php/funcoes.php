@@ -33,8 +33,8 @@ function BuscaTarefas(){
         echo                "<small>$data</small>";
         echo            "</div>";
         echo            "<p class='mb-1'>$lembrete</p>";
-        echo            "<a href='./funcoes.php?acao=edita&tarefa=$id'><button id='$id' type='submit' name='editar' class='btn btn-secondary editar'>Editar</button></a>";
-        echo            "<a href='./funcoes.php?acao=excluir&tarefa=$id'><button id='$id' type='submit' name='excluir' class='btn btn-secondary excluir'>Excluir</button></a>";
+        echo            "<a href='php/funcoes.php?acao=edita&tarefa=$id'><button id='$id' type='submit' name='editar' class='btn btn-secondary editar'>Editar</button></a>";
+        echo            "<a href='php/funcoes.php?acao=excluir&tarefa=$id'><button id='$id' type='submit' name='excluir' class='btn btn-secondary excluir'>Excluir</button></a>";
         echo        "</div>";
         echo    "</div>";
         echo "</div>";
@@ -66,9 +66,9 @@ function AtualizaTarefa($acao, $tarefa){
         $_SESSION['titulo'] = $verificaInfoTerafa['titulo'];
         $_SESSION['data'] = $verificaInfoTerafa['data'];
         $_SESSION['lembrete'] = $verificaInfoTerafa['lembrete'];
-        header("Location: atualizar-tarefa.php");
+        header("Location: ../atualizar-tarefa.php");
     }elseif($acao == 'excluir'){
         $deleteTarefa = mysqli_query($link, "DELETE FROM tarefas WHERE idTarefas = '$tarefa'");
-        header("Location: home.php");
+        header("Location: ../home.php");
     }
 }
